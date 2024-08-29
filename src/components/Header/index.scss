@@ -1,0 +1,74 @@
+@import '../../variables.scss';
+
+.header {
+    width: 100%;
+    background-color: $white_color;
+    box-shadow: 0 4px 12px 0 rgba(207, 207, 207, 0.25);
+
+    &__wrapper {
+        padding: 22px 30px; 
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    &__icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    &__icon {
+        position: relative;
+        height: 40px;
+        width: 40px;
+        border: 1px solid $little_gray_stroke;
+        border-radius: 50%;
+
+        svg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__hamburger {
+        width: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: end;
+        gap: 4px;
+        &--1 {
+            width: 50%;
+            height: 2px;
+            border-radius: 5px;
+            background: $little_gray;
+        }
+
+        &--2 {
+            width: 100%;
+            height: 2px;
+            border-radius: 5px;
+            background: $little_gray;
+        }
+
+        &--3 {
+            width: 75%;
+            height: 2px;
+            border-radius: 5px;
+            background: $little_gray;
+        }
+    }
+}

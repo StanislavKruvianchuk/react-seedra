@@ -1,0 +1,61 @@
+@import '../../variables.scss';
+
+.hero {
+    padding-top: 20px;
+    &__wrapper {
+        width: 100%;
+        border-radius: 25px;
+        background: $light-geen;
+        overflow: hidden;
+    }
+
+    &__product-images {
+        background: url('../../assets/hero_bg.png') no-repeat center center / cover;
+    }
+
+    &__product-info {
+        padding: 0 15px;
+    }
+
+    &__buttons-container {
+        padding: 30px 15px 50px 15px; 
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+    }
+
+    &__price {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+    }
+
+    &__product-price {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 32px;
+        color: $red_color;
+    }
+
+    &__product-compare {
+        font-size: 22px;
+        color: $little_gray;
+        text-decoration: line-through;
+    }
+
+    &__product-title {
+        padding-top: 15px;
+        font-size: 28px;
+        line-height: 1.3;
+        text-align: left;
+    }
+
+    &__product-description {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 2;
+        text-align: left;
+    }
+}
