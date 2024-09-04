@@ -1,0 +1,36 @@
+@import '../../variables.scss';
+
+.product {
+    text-align: left;
+    &__rating {
+        padding-top: 30px;
+        font-weight: 400;
+        font-size: 14px;
+        color: $little_gray;
+    }
+
+    &__rating-amount {
+        padding-left: 10px;
+    }
+
+    &__title {
+        padding-top: 10px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        color: $main_color;
+    }
+
+    &__price-box {
+        padding-top: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__price {
+        font-weight: 600;
+        font-size: 28px;
+        color: $main_color;
+    }
+}
