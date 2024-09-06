@@ -3,6 +3,7 @@
 .hero {
     padding-top: 20px;
     &__wrapper {
+        margin-bottom: 30px;
         width: 100%;
         border-radius: 25px;
         background: $light-geen;
@@ -13,16 +14,16 @@
         background: url('../../assets/hero_bg.png') no-repeat center center / cover;
     }
 
-    &__product-info {
-        padding: 0 15px;
-    }
 
     &__buttons-container {
-        padding: 30px 15px 50px 15px; 
+        padding: 30px 0 50px 0; 
         display: flex;
         align-items: center;
         gap: 12px;
+    }
 
+    &__bottom {
+        padding: 0 15px;
     }
 
     &__price {
@@ -57,5 +58,57 @@
         font-weight: 300;
         line-height: 2;
         text-align: left;
+    }
+
+    @media screen and (min-width: $tabletXL) {
+        &__wrapper {
+            display: flex;
+        }
+
+        &__product-images {
+            order: 2
+        }
+
+        &__product-images {
+            background: url('../../assets/hero_desktop_bg.png') no-repeat center center / cover;
+        }
+
+        &__bottom {
+            padding-top: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &__product-title {
+            padding-top: 0;
+            font-size: 38px;
+            font-weight: 600;
+        }
+
+        &__product-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__price {
+            padding-top: 25px;
+            order: 3;
+        }
+    }
+
+    @media screen and (min-width: $laptop) {
+        &__bottom {
+            padding: 60px 15px 0 75px;
+        }
+
+        &__product-title {
+            font-size: 48px;
+            font-weight: 600;
+        }
+
+        &__product-description {
+            font-size: 16px;
+        }
     }
 }

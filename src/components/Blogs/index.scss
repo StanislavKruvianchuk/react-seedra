@@ -1,0 +1,21 @@
+@import '../../variables.scss';
+
+.blogs {
+    margin-top: 40px;
+
+    &__top {
+        padding-bottom: 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        overflow-x: auto;
+    }
+  
+}

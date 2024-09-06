@@ -1,9 +1,19 @@
 @import '../../variables.scss';
 
 .product {
+    position: relative;
+    height: 100%;
+    max-width: 350px;
+    padding: 25px;
     text-align: left;
-    &__rating {
+    border: 2px solid $little_gray_stroke;
+    border-radius: 8px;
+
+    &__info {
         padding-top: 30px;
+    }
+
+    &__rating {
         font-weight: 400;
         font-size: 14px;
         color: $little_gray;

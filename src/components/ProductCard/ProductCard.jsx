@@ -1,5 +1,6 @@
 import './index.scss';
 import AddToCartButton from '../AddToCartButton/AddToCartButton';
+import WishListButton from '../WishlistButton/WishListButton';
 import cabbage from '../../assets/cabbage.png';
 import corn from '../../assets/corn.png';
 import spinach from '../../assets/spinach.png';
@@ -46,15 +47,18 @@ const ProductCard = ({ product }) => {
     return (
         <div className='product'>
             <div className='product__wrapper'>
+                <WishListButton />
                 <img src={imageSrc} alt="lol" />
-                <div className='product__rating'>
-                    {ratingHTML()}
-                    <span className='product__rating-amount'>{ `(${reviews})` }</span>
-                </div>
-                <div className='product__title'>{title}</div>
-                <div className='product__price-box'>
-                    <span className='product__price'>${price}</span>
-                    <AddToCartButton />
+                <div className='product__info'>
+                    <div className='product__rating'>
+                        {ratingHTML()}
+                        <span className='product__rating-amount'>{ `(${reviews})` }</span>
+                    </div>
+                    <div className='product__title'>{title}</div>
+                    <div className='product__price-box'>
+                        <span className='product__price'>${price}</span>
+                        <AddToCartButton />
+                    </div>
                 </div>
             </div>
         </div>
