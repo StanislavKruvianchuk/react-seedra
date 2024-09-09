@@ -3,18 +3,56 @@
 .hero {
     padding-top: 20px;
     &__wrapper {
+        position: relative;
         width: 100%;
         border-radius: 25px;
         background: $light-geen;
         overflow: hidden;
     }
 
-    &__product-images {
-        background: url('../../assets/hero_bg.png') no-repeat center center / cover;
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    &__bg-leave-1 {
+        position: absolute;
+        top: 90px;
+        right: 5px;
+    }
+
+    &__bg-leave-2 {
+        position: absolute;
+        top: 44px;
+        right: 0;
+    }
+
+    &__bg-leave-3 {
+        position: absolute;
+        top: 31px;
+        right: 58px;
+    }
+
+    &__bg-leave-4 {
+        position: absolute;
+        bottom: 15px;
+        left: 10px;
+    }
+
+    &__image-wrapper {
+        position: relative;
+        padding-top: 20px;
+        z-index: 1;
     }
 
     &__product-info {
         padding: 0 15px;
+    }
+
+    &__product-images {
+        position: relative;
     }
 
     &__buttons-container {

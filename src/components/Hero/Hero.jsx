@@ -1,14 +1,23 @@
 import './index.scss'
 import MainImage from '../../assets/product_image.png';
 import HeroBg from '../../assets/hero_bg.png';
+import leave_1 from '../../assets/leave-1.png';
+import leave_2 from '../../assets/leave-2.png';
+import leave_3 from '../../assets/leave-3.png';
+import leave_4 from '../../assets/leave-4.png';
 
 const Hero = () => {
     return (
         <div className='hero main-wrapper'>
             <div className='hero__wrapper'>
                 <div className='hero__product-images'>
-                    <div>
-                        <img className='hero__main-image' src={MainImage} alt="" />
+                    <img src={HeroBg} className="hero__bg"></img>
+                    <img className='hero__bg-leave-1' src={leave_1} alt="leave_1" />
+                    <img className='hero__bg-leave-2' src={leave_2} alt="leave_2" />
+                    <img className='hero__bg-leave-3' src={leave_3} alt="leave_3" />
+                    <img className='hero__bg-leave-4' src={leave_4} alt="leave_4" />
+                    <div className='hero__image-wrapper' >
+                        <img className='hero__main-image' src={MainImage} alt="bachground" />
                     </div>
                 </div>
                 <div className='hero__product-info'>
