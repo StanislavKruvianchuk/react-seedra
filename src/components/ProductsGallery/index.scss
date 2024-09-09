@@ -1,0 +1,27 @@
+@import '../../variables.scss';
+
+.gallery {
+    margin-top: 28px;
+
+    &__wrapper {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+    }
+
+
+    @media screen and (min-width: $tablet) {
+        &__wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media screen and (min-width: $tabletXL) {
+        &__wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}
+

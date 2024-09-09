@@ -1,2 +1,11 @@
 @import './reset.scss';
 @import './fonts.scss';
+@import './variables.scss';
+
+.main-button {
+    padding: 20px 30px;
+    font-weight: 600;
+    font-style: 22px;
+    color: $green_color;
+    border: 1px solid $little_gray_stroke;
+}

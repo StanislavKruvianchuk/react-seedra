@@ -1,0 +1,40 @@
+@import '../../variables.scss';
+
+.banner {
+    margin-top: 16px;
+
+    &__wrapper {
+        margin-bottom: 30px;
+        position: relative;
+        padding: 40px 0 60px 0;
+        border-radius: 12px;
+        background: rgba(255, 230, 46, 0.09);
+        overflow: hidden;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    &__description {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.7;
+        color: $little_gray;
+    }
+
+    &__bg-left {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    &__bg-right {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+    }
+}

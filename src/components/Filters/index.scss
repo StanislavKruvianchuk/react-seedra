@@ -1,0 +1,8 @@
+.filters {
+    &__wrapper {
+        display: flex;
+        gap: 11px;
+        overflow-x: auto;
+        padding-bottom: 30px;
+    }
+}
