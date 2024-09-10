@@ -47,5 +47,28 @@
     &__logo-wrapper {
         padding-bottom: 40px;
         grid-column: 1 / 3;
+
+        &--desktop {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: $tabletXL) {
+        &__logo-wrapper {
+            display: none;
+            &--desktop {
+                display: block;
+            }
+        }
+
+        &__top {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__left-menu,
+        &__right-menu {
+            flex-direction: row;
+        }
     }
 }

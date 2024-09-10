@@ -1,0 +1,43 @@
+@import '../../variables.scss';
+
+.mobile-menu {
+    position: fixed;
+    top: 84px;
+    right: 0;
+    width: 75%;
+    height: 100%;
+    display: none;
+    transform: translateX(350%);
+    background: white;
+    transition: all .6s ease;
+    z-index: 4;
+
+    &--active {
+        display: block;
+        transform: translateX(0);
+    }
+
+    &__wrapper {
+        padding: 15px 22px;
+    }
+
+    &__search {
+        height: 48px;
+        padding-left: 23px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        border: 1px solid $little_gray_stroke;
+        border-radius: 71px;
+
+        input {
+            border: none;
+        }
+    }
+
+    &__nav-item {
+        padding: 11px 0;
+        border-bottom: 1px solid $little_gray_stroke;
+        text-align: left;
+    }
+}

@@ -14,6 +14,9 @@ const Footer = () => {
                         <li>ABOUT SEEDRA</li>
                         <li>OUR BLOG</li>
                     </ul>
+                    <div className='footer__logo-wrapper--desktop'>
+                        <img src={Logo} alt="footer-logo" />
+                    </div>
                     <ul className='footer__right-menu'>
                         <li> Terms&Conditions </li>
                         <li> Privacy Policy </li>

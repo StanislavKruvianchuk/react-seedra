@@ -3,7 +3,6 @@ import FilterButton from '../FilterButton/FilterButton';
 import filters from '../../dataFilters';
 
 const Filters = () => {
-    console.log(filters);
     return (
         <div className='filters'>
             <div className="filters__wrapper">

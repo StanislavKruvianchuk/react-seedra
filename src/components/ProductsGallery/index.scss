@@ -1,14 +1,32 @@
 @import '../../variables.scss';
 
 .gallery {
-    margin-top: 28px;
-
     &__wrapper {
+        margin-bottom: 30px;
         display: flex;
         gap: 10px;
         overflow-x: auto;
     }
 
+    &__top {
+        padding-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__button {
+        padding: 0 33px;
+        height: 51px;
+        width: fit-content;
+        color: $green_color;
+        border-radius: 8px;
+        border: 1px solid $little_gray_stroke;
+        transition: all .3s ease;
+
+        &:hover {
+            border: 1px solid $green_color;
+        }
+    }
 
     @media screen and (min-width: $tablet) {
         &__wrapper {

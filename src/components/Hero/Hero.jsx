@@ -1,6 +1,7 @@
 import './index.scss'
 import MainImage from '../../assets/main_image_desktop.png';
 import HeroBg from '../../assets/hero_bg.png';
+import HeroBgDesktop from '../../assets/hero_desktop_bg.png';
 import leave_1 from '../../assets/leave-1.png';
 import leave_2 from '../../assets/leave-2.png';
 import leave_3 from '../../assets/leave-3.png';
@@ -19,6 +20,8 @@ const Hero = () => {
                     <div className='hero__image-wrapper' >
                         <img className='hero__main-image' src={MainImage} alt="bachground" />
                     </div>
+
+                    <img src={HeroBgDesktop} className="hero__bg--desktop"></img>
                 </div>
                 <div className='hero__bottom'>
                     <div className='hero__product-info'>

@@ -15,6 +15,10 @@
         top: 0;
         left: 0;
         z-index: 0;
+
+        &--desktop {
+           display: none;
+        }
     }
 
     &__bg-leave-1 {
@@ -107,7 +111,7 @@
         }
 
         &__product-images {
-            background: url('../../assets/hero_desktop_bg.png') no-repeat center center / cover;
+            position: relative;
         }
 
         &__bottom {
@@ -132,6 +136,17 @@
             padding-top: 25px;
             order: 3;
         }
+
+        &__bg {
+            display: none;
+
+            &--desktop {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                display: block;
+            }
+        }
     }
 
     @media screen and (min-width: $laptop) {
@@ -146,6 +161,10 @@
 
         &__product-description {
             font-size: 16px;
+        }
+
+        &__image-wrapper {
+            padding-top: 60px;
         }
     }
 }

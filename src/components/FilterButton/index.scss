@@ -10,4 +10,10 @@
     font-weight: 400;
     font-size: 14px;
     text-transform: uppercase;
+    transition: all .3s ease;
+
+    &--active {
+        border: 2px solid $green_color;
+        color: $green_color;
+    }
 }
