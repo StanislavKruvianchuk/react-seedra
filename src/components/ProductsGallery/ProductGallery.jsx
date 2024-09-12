@@ -17,7 +17,7 @@ const ProductGallery = () => {
                 {
                     products.map((product) => {
                         return (
-                            <div>
+                            <div key={product.id}>
                                 <ProductCard  product={product} />
                             </div>
                         )

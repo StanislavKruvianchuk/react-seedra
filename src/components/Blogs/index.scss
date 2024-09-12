@@ -12,10 +12,18 @@
 
     &__list {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         gap: 30px;
         overflow-x: auto;
+    }
+
+    @media screen and (min-width: $tabletXL) {
+        &__list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr 1fr;
+        }
     }
   
 }

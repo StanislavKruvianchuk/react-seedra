@@ -1,7 +1,21 @@
 import './index.scss';
+import { ReactComponent as Arrow } from '../../assets/icons/arrow.svg';
+import { ReactComponent as GreenArrow } from '../../assets/icons/green-arrow.svg';
+import menuItems from '../../dataMobileMenu';
+import { useState } from 'react';
 
 const MobileMenu = ({ active }) => {
-    console.log(active)
+    const [openItems, setOpenItems] = useState([]);
+
+    const toggleSubItems = (index) => {
+        console.log(index)
+        console.log(openItems)
+        if (openItems.includes(index)) {
+            setOpenItems(openItems.filter((item) => item !== index));
+        } else {
+            setOpenItems([...openItems, index]);
+        }
+    }
 
     return (
         <div className={`mobile-menu ${active ? 'mobile-menu--active' : '' }`}>
@@ -15,29 +29,54 @@ const MobileMenu = ({ active }) => {
                         <input className='mobile-menu__search-input' type="text" placeholder="Search"></input>
                     </div>
                     <nav className='mobile-menu__nav'>
-                        <div className='mobile-menu__nav-item'>
-                            All vegetables
+                        {
+                            menuItems.map((item, index) => {
+                                const isOpen = openItems.includes(index);
+                                return (
+                                    <div className='mobile-menu__nav-item' key={index}>
+                                        <div onClick={() => toggleSubItems(index)} className='mobile-menu__nav-box'> 
+                                            <span className={`${isOpen ? 'mobile-menu__nav-title--active' : '' }`}>{ item.name }</span>   
+
+                                            {
+                                                item.subItems && item.subItems.length > 0 && (
+                                                    <span className={`arrow ${isOpen ? 'arrow-active' : ''}`}>
+                                                       <Arrow />
+                                                    </span> 
+                                                )
+                                            }
+                                        </div>
+                                        {
+                                            item.subItems && item.subItems.length > 0 && (
+                                                <div className={`mobile-menu__sub-box ${isOpen ? 'mobile-menu__sub-box--active' : ''}`}>
+                                                    {
+                                                        item.subItems.map((subItem) => {
+                                                            return (
+                                                                <div className='mobile-menu__sub-item'>
+                                                                    { subItem.name }
+                                                                </div>
+                                                            )
+                                                        })
+                                                    }
+                                                </div>
+                                            )
+                                        }
+                                    </div>
+                                )
+                            })
+                        }
+                    <div className='mobile-menu__about'>
+                        <div className='mobile-menu__about-item'>
+                            <div>Our blog</div>
+                            <GreenArrow/>
                         </div>
-                        <div className='mobile-menu__nav-item'>
-                            Bundles
+                        <div className='mobile-menu__about-item'>
+                            <div>About Seedra</div>
+                            <GreenArrow/>
                         </div>
-                        <div className='mobile-menu__nav-item'>
-                            Herbs
-                        </div>
-                        <div className='mobile-menu__nav-item'>
-                            Vegetables
-                        </div>
-                        <div className='mobile-menu__nav-item'>
-                            Fruits
-                        </div>
-                        <div className='mobile-menu__nav-item'>
-                            Supplies
-                        </div>
-                        <div className='mobile-menu__nav-item'>
-                            Flowers
-                        </div>
+                    </div>
                     </nav>
             </div>
+            <div className='mobile-menu__blur'></div>
         </div>
     )
 }
