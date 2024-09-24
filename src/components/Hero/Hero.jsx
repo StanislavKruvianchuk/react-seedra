@@ -10,7 +10,7 @@ import { ReactComponent as FireHero } from '../../assets/icons/hero-fire.svg';
 
 const Hero = () => {
     return (
-        <div className='hero main-wrapper header-indent'>
+        <section className='hero main-wrapper header-indent'>
             <div className='hero__wrapper'>
                 <div className='hero__product-images'>
                     <img src={HeroBg} className="hero__bg" alt='hero_bg-mobile'/>
@@ -43,7 +43,7 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

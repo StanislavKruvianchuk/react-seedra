@@ -4,7 +4,7 @@ import RightBg from '../../assets/banner_bg_right.png';
 
 const Banner = () => {
     return (
-        <div className="banner main-wrapper">
+        <section className="banner main-wrapper">
             <div className="banner__wrapper">
                 <div className="banner__title">We sell seeds</div>
                 <div className="banner__description">that always sprout and gardening supplies which never break</div>
@@ -14,7 +14,7 @@ const Banner = () => {
                     <img className='banner__bg-right' src={RightBg} alt="right_bg" />
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

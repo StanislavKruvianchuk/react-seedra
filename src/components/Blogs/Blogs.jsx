@@ -4,8 +4,8 @@ import blogsList from '../../dataBlogs';
 
 const Blogs = () => {
     return (
-        <div className="blogs main-wrapper">
-            <div className="blogs__wrapper">
+        <section className="blogs main-wrapper">
+            <article className="blogs__wrapper">
                 <div className="blogs__container">
                     <div className="blogs__top">
                         <h2 className="h2">Our blog.</h2>
@@ -21,8 +21,8 @@ const Blogs = () => {
                         }
                     </div>
                 </div>
-            </div>
-        </div>
+            </article>
+        </section>
     )
 }
 

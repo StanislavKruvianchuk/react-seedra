@@ -1,0 +1,37 @@
+@import '../../variables.scss';
+
+
+.reviews {
+    &__slide {
+        min-width: 540px;
+        max-width: 540px;
+        width: 100%;
+        padding: 42px 33px;
+        border-radius: 12px;
+        border: 1px solid $little_gray_stroke;
+        box-shadow: 0 4px 21px 0 rgba(209, 209, 209, 0.25);
+        background: $white_color;
+    }
+
+    &__slide-top {
+        padding-bottom: 25px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    &__slide-info {
+        text-align: left;
+    }
+
+    &__slide-name {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    &__slide-date {
+        font-size: 14px;
+        font-weight: 400;
+        color: $little_gray;
+    }
+}
