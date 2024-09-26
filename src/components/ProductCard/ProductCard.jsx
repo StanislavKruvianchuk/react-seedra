@@ -31,13 +31,13 @@ const ProductCard = ({ product }) => {
 
         for (let i = 0; i < starsCount; i++) {
             stars.push(
-                <img key={rating} src={star} alt="lol" />
+                <img key={rating} src={star} alt="star" />
             )
         }
 
         if (rating % 1 !== 0) {
             stars.push(
-                <img key={rating} src={starHalf} alt="lol" />
+                <img key={rating} src={starHalf} alt="star" />
             )
         }
 
@@ -48,7 +48,7 @@ const ProductCard = ({ product }) => {
         <div className='product'>
             <div className='product__wrapper'>
                 <WishListButton />
-                <img src={imageSrc} alt="lol" />
+                <img src={imageSrc} alt="product image" />
                 <div className='product__info'>
                     <div className='product__rating'>
                         {ratingHTML()}

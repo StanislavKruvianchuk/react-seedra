@@ -1,0 +1,62 @@
+@import '../../variables.scss';
+
+
+.swapy {
+
+    &__wrapper {
+        position: fixed;
+        bottom: 15px;
+        right: 15px;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: wheat;
+        border-radius: 100%;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
+        transform: translateY(200%);
+        transition: transform .4s ease;
+        cursor: pointer;
+
+        &--active {
+            transform: translateY(0%);
+        }
+    }
+
+    &__icon {
+        width: 46px;
+        height: 46px;
+    }
+
+    &__container {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: clamp(400px, 550px, 780px);
+        height: fit-content;
+        padding: 60px 40px 40px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        background: #001F3F;
+        border-radius: 10px;
+        z-index: 3;
+    
+        .section {
+            width: 100%;
+            aspect-ratio: 1;
+    
+            div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                background: wheat;
+                border-radius: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+

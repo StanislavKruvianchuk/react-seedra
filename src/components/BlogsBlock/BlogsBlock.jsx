@@ -3,18 +3,17 @@ import spinachBlog from '../../assets/spinach_blog.png';
 import { ReactComponent as Clock } from '../../assets/icons/clock-three.svg';
 
 const BlogsBlock = ({ item }) => {
-    const {time, title, description, button, image_type} = item
+    const {time, title, description, button, image_type, bg_color} = item
 
     let moreButton
 
     if (button) {
         moreButton = 
             <a className='block__button' href="/">Read</a>
-        
     }
 
     return (
-        <div className='block'>
+        <div className='block' style={{ background: bg_color}}>
             <div className='block__wrapper'>
                 <div className='block__time'>
                 <Clock />
