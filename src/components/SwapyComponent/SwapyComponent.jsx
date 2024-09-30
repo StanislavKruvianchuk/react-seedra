@@ -42,9 +42,7 @@ const SwapyComponent = () => {
             swapy.enable(true);
 
             swapy.onSwap((event) => {
-                console.log(event.data.object);
-                console.log(event.data.array);
-                console.log(event.data.map);
+               
             });
         } else {
             console.error("Container element not found!");
@@ -53,7 +51,7 @@ const SwapyComponent = () => {
 
     return (
         <div className='swapy'>
-             <div onClick={handleShow} className={`swapy__wrapper ${active ? 'swapy__wrapper--active' : ''}`} title="Game button">
+            <div onClick={handleShow} className={`swapy__wrapper ${active ? 'swapy__wrapper--active' : ''}`} title="Game button">
                 <TbDeviceGamepad2 className='swapy__icon' />
             </div>
                 {

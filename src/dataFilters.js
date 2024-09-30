@@ -1,11 +1,11 @@
- const filters = [
-    { title: "ALL", image_type: "leave" },
-    { title: "BUNDLES", image_type: "double_cards" },
-    { title: "HERBS", image_type: "leave_second" },
-    { title: "vegetables", image_type: "tomato" },
-    { title: "FRUITS", image_type: "strawberry" },
-    { title: "SUPPLIES", image_type: "gardering_tool" },
-    { title: "flowers", image_type: "flower" },
-  ];
+const filters = [
+  { title: "all", image_type: "leave" },
+  { title: "bundles", image_type: "double_cards" },
+  { title: "herbs", image_type: "leave_second" },
+  { title: "vegetables", image_type: "tomato" },
+  { title: "fruits", image_type: "strawberry" },
+  { title: "supplies", image_type: "gardering_tool" },
+  { title: "flowers", image_type: "flower" },
+];
 
-  export default filters
+export default filters

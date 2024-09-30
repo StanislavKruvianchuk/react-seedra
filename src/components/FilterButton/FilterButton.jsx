@@ -6,12 +6,9 @@ import leave_second from '../../assets/leave_second.png';
 import gardering_tool from '../../assets/gardening_tool.png';
 import strawberry from '../../assets/strawberry.png';
 import tomato from '../../assets/tomato.png';
-import { useState } from 'react';
 
 
-const FilterButton = ({ filter }) => {    
-    const [active, setActive] = useState(false)
-
+const FilterButton = ({ filter, handleFilterButtonClick, selectedFilters, category, i }) => {    
     const { image_type, title } = filter;
 
     const images = {
@@ -26,20 +23,10 @@ const FilterButton = ({ filter }) => {
 
     const imageSrc = images[image_type];
 
-    const onButtonClick = () => {
-        setActive(!active)
-    }
-
-    let buttonClass = '';
-
-    if (active) {
-        buttonClass = 'filter-button filter-button--active'
-    } else {
-        buttonClass = 'filter-button'
-    }
-
     return (
-        <button onClick={onButtonClick} className={buttonClass}>
+        <button onClick={() => handleFilterButtonClick(category)} className={`filter-button ${ 
+            selectedFilters?.includes(category) ? "filter-button--active" : ""
+        }`} key={`filters-${i}`}>
              <img src={imageSrc} alt={title} />
             <span> {title}</span>
         </button>

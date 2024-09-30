@@ -17,7 +17,7 @@ const Reviews = () => {
                 <Swiper
                     modules={[Pagination]} 
                     spaceBetween={50}
-                    slidesPerView={2}
+                    slidesPerView={1}
                     centeredSlides={true}
                     initialSlide={2}
                     pagination={{ 
@@ -25,8 +25,12 @@ const Reviews = () => {
                      }}
                     breakpoints={{
                     1200: {
-                        slidesPerView: 1,
                         spaceBetween: 20, 
+                        slidesPerView: 2
+                    },
+
+                    991: {
+                        slidesPerView: 2
                     }
                     }} 
                 >

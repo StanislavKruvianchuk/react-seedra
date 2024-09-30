@@ -91,6 +91,10 @@
         display: none;
     }
 
+    &__link {
+        cursor: pointer;
+    }
+
 
     @media screen and (min-width: $tabletXL) {
         &__hamburger {
@@ -122,13 +126,26 @@
 
         &__search {
             height: 48px;
-            padding-left: 23px;
+            padding: 0 3px 0 23px;
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 20px;
             border: 1px solid $little_gray_stroke;
             border-radius: 71px;
+            transition: border .3s ease;
+
+            span {
+                transition: transform .6s ease;
+            }
+
+            &:focus-within {
+                border: 1px solid $green_color;
+
+                span {
+                    transform: rotate(-360deg);
+                }
+            }       
         }
 
         &__navigation-socials {

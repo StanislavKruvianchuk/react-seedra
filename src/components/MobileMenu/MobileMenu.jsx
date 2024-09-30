@@ -8,14 +8,20 @@ const MobileMenu = ({ active }) => {
     const [openItems, setOpenItems] = useState([]);
 
     const toggleSubItems = (index) => {
-        console.log(index)
-        console.log(openItems)
         if (openItems.includes(index)) {
             setOpenItems(openItems.filter((item) => item !== index));
         } else {
             setOpenItems([...openItems, index]);
         }
     }
+
+    if (active) {
+        document.body.style.overflow = 'hidden'
+    } else {
+        document.body.style.overflow = 'auto'
+    }
+
+
 
     return (
         <div className={`mobile-menu ${active ? 'mobile-menu--active' : '' }`}>
@@ -49,9 +55,9 @@ const MobileMenu = ({ active }) => {
                                             item.subItems && item.subItems.length > 0 && (
                                                 <div className={`mobile-menu__sub-box ${isOpen ? 'mobile-menu__sub-box--active' : ''}`}>
                                                     {
-                                                        item.subItems.map((subItem) => {
+                                                        item.subItems.map((subItem, i) => {
                                                             return (
-                                                                <div className='mobile-menu__sub-item'>
+                                                                <div className='mobile-menu__sub-item' key={i}>
                                                                     { subItem.name }
                                                                 </div>
                                                             )

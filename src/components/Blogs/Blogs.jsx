@@ -13,9 +13,9 @@ const Blogs = () => {
                     </div>
                     <div className="blogs__list">
                         {
-                            blogsList.map((item) => {
+                            blogsList.map((item, i) => {
                                 return (
-                                    <BlogsBlock item={item} />
+                                    <BlogsBlock item={item} key={i}/>
                                 )
                             })
                         }

@@ -1,15 +1,20 @@
 import './index.scss';
 import FilterButton from '../FilterButton/FilterButton';
-import filters from '../../dataFilters';
 
-const Filters = () => {
+const Filters = ({ handleFilterButtonClick, selectedFilters, filters }) => {
     return (
         <div className='filters'>
             <div className="filters__wrapper">
                 {
-                    filters.map((filter) => {
+                    filters.map((filter, i) => {
                         return (
-                            <FilterButton filter={filter} />
+                            <FilterButton filter={filter} 
+                                handleFilterButtonClick={handleFilterButtonClick} 
+                                selectedFilters={selectedFilters} 
+                                category={filter.title} 
+                                i={filter.i} 
+                                key={i} 
+                            />
                         )
                     })
                 }

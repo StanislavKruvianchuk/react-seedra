@@ -5,6 +5,7 @@ const products = [
         rating: 4.7,
         reviews: 154,
         image_type: "cabbage",
+        type: 'all bundles',
         id: 1
     },
     {
@@ -13,6 +14,7 @@ const products = [
         rating: 4,
         reviews: 89,
         image_type: "corn",
+        type: 'all herbs',
         id: 2
     },
     {
@@ -21,6 +23,7 @@ const products = [
         rating: 4.8,
         reviews: 203,
         image_type: "spinach",
+        type: 'all vegetables',
         id: 3
     },
     {
@@ -29,6 +32,7 @@ const products = [
         rating: 4.7,
         reviews: 154,
         image_type: "cabbage",
+        type: 'all fruits',
         id: 4
     },
     {
@@ -37,6 +41,7 @@ const products = [
         rating: 4.1,
         reviews: 112,
         image_type: "corn",
+        type: 'all fruits',
         id: 5
     },
     {
@@ -45,6 +50,7 @@ const products = [
         rating: 4.9,
         reviews: 57,
         image_type: "spinach",
+        type: 'all supplies',
         id: 6
     }
 ]

@@ -5,7 +5,6 @@ const WishListButton = () => {
     const [added, setAdded] = useState(false)
 
     const onButtonClick = (event) => {
-        console.log(event.target)
         setAdded(!added)
         event.target.classList.toggle("wishlist-button--active")
     }
