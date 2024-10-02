@@ -3,8 +3,7 @@ import Banner from "../components/Banner/Banner"
 import ProductGallery from "../components/ProductsGallery/ProductGallery"
 import Blogs from "../components/Blogs/Blogs"
 import Reviews from "../components/Reviews/Reviews"
-// import SwapyComponent from "../components/SwapyComponent/SwapyComponent"
-import AboutUs from "../components/AboutUsSection/AboutUsSection"
+import SwapyComponent from "../components/SwapyComponent/SwapyComponent"
 import AboutUsSection from "../components/AboutUsSection/AboutUsSection"
 
 const Home = () => {
@@ -15,7 +14,7 @@ const Home = () => {
             <ProductGallery />
             <Blogs />
             <Reviews />
-            {/* <SwapyComponent /> */}
+            <SwapyComponent />
             <AboutUsSection />
         </main>
     )

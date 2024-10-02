@@ -32,7 +32,7 @@ const SwapyComponent = () => {
 
 
     useEffect(() => {
-        const container = document.querySelector('.container');
+        const container = document.querySelector('.swapy__container');
         
         if (container) {
             const swapy = createSwapy(container, {
