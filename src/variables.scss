@@ -82,6 +82,7 @@ $primary-color:                                #4fa083;
     font-size: 22px;
     font-weight: 600;
     line-height: 1.5;
+    animation: leftToRight 1s;
 
     @media screen and (min-width: $tabletXL) {
          font-size: 36px;

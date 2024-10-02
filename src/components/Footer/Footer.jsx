@@ -6,7 +6,8 @@ import { ReactComponent as Facebook } from '../../assets/icons/facebook.svg';
 
 const Footer = () => {
     return (
-        <footer className='footer main-wrapper'>
+        <footer className='footer'>
+            <div className='footer__container main-wrapper'>
            <div className='footer__wrapper'>
                 <div className="footer__top">
                     <div className='footer__logo-wrapper'>
@@ -33,6 +34,8 @@ const Footer = () => {
                     <div className='footer__bottom-text'>All rights reserved</div>
                 </div>
            </div>
+
+            </div>
         </footer>
     )
 }

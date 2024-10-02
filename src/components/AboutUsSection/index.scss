@@ -2,6 +2,48 @@
 
 .about-us {
     &__wrapper {
+        padding: 75px 0;
+        width: 100%;
         display: flex;
+    }
+
+    &__text,
+    &__image-wrapper {
+        width: 50%;
+    }
+
+    &__text {
+        font-weight: 300;
+        line-height: 1.7;
+        text-align: left;
+        p {
+            padding-bottom: 40px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__image-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__image {
+        width: 100%;
+    }
+
+
+    @media screen and (max-width: $tabletXL ) {
+        &__wrapper {
+            flex-direction: column;
+            padding: 35px 0;
+        }
+
+        &__text,
+        &__image-wrapper {
+            width: 100%;
+        }
     }
 }

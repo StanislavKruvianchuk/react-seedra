@@ -3,11 +3,18 @@
 .reviews {
     padding: 96px 0 60px 0;
 
+    &__wrapper {
+        padding: 75px 0 ;
+    }
+
     &__title {
         padding-bottom: 30px;
     }
 
-    &__swiper-slide {
-        
+
+    @media screen and (max-width: $tabletXL )  {
+        &__wrapper {
+            padding: 35px 0;
+        }
     }
 }

@@ -9,7 +9,7 @@ import AboutUsSection from "../components/AboutUsSection/AboutUsSection"
 
 const Home = () => {
     return (
-        <div>
+        <main>
             <Hero/>
             <Banner />
             <ProductGallery />
@@ -17,7 +17,7 @@ const Home = () => {
             <Reviews />
             {/* <SwapyComponent /> */}
             <AboutUsSection />
-        </div>
+        </main>
     )
 }
 

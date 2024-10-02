@@ -10,7 +10,7 @@ import reviews from '../../reviews';
 
 const Reviews = () => {
     return (
-        <div className='reviews main-wrapper'>
+        <section className='reviews main-wrapper'>
             <div className='reviews__wrapper'>
                 <h2 className='h2 reviews__title'>What out clients say</h2>
 
@@ -45,7 +45,7 @@ const Reviews = () => {
                     }
                 </Swiper>
             </div>
-        </div>
+        </section>
     )
 }
 
