@@ -13,11 +13,11 @@ const Footer = () => {
                     <div className='footer__logo-wrapper'>
                         <img src={Logo} alt="footer-logo" />
                     </div>
-                    <ul className='footer__left-menu'>
-                        <li>ALL PRODUCTS</li>
-                        <li>ABOUT SEEDRA</li>
-                        <li>OUR BLOG</li>
-                    </ul>
+                    <div className='footer__left-menu'>
+                        <a href='#'>ALL PRODUCTS</a>
+                        <a href='#'>ABOUT SEEDRA</a>
+                        <a href='#'>OUR BLOG</a>
+                    </div>
                     <div className='footer__logo-wrapper--desktop'>
                         <img src={Logo} alt="footer-logo" />
                     </div>

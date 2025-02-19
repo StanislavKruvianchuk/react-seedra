@@ -13,12 +13,19 @@ const ProductGallery = () => {
     let filters = ["bundles", "herbs", "vegetables", "fruits", "supplies", "flowers" ]
 
     const handleFilterButtonClick = (selectedCategory) => {
-        if(selectedFilters.includes(selectedCategory)) {
-            let filters = selectedFilters.filter((el) => el !== selectedCategory);
-            setSelectedFilters(filters)
-        } else {
-            setSelectedFilters([...selectedFilters, selectedCategory])
-        }
+        setSelectedFilters(prevFilters => {
+            if (selectedCategory === 'all') {
+                return ['all'];
+            }
+    
+            let updatedFilters = prevFilters.filter(el => el !== 'all');
+    
+            if (updatedFilters.includes(selectedCategory)) {
+                return updatedFilters.filter(el => el !== selectedCategory);
+            } else {
+                return [...updatedFilters, selectedCategory];
+            }
+        });
     }
     useEffect(() => {
         filterItems();

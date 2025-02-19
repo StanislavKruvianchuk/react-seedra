@@ -4,19 +4,19 @@ import MobileMenu from '../MobileMenu/MobileMenu';
 import { useState } from 'react';
 
 const Header = () => {
-    const [active, setActive] = useState(false);
+    const [activeMobileHeader, setActiveMobileHeader] = useState(false);
 
     const onButtonClick = () => {
-        setActive(!active)
+        setActiveMobileHeader(!activeMobileHeader)
     }
 
     return (
         <header className='header'>
             <div className='header__wrapper'>
                 <div className='header__inner'>
-                    <div className='header__logo'>
+                    <a href='/' className='header__logo'>
                         <img src={Logo} alt="logo" />
-                    </div>
+                    </a>
                     <nav className='header__navigation'>
                         <ul className="header__navigation-links">
                             <li className='header__link'>ALL PRODUCTS</li>
@@ -48,7 +48,7 @@ const Header = () => {
                                     <path d="M17.6573 1.80092C16.6273 0.782331 15.2619 0.160641 13.8078 0.0481522C12.3538 -0.0643367 10.9068 0.339793 9.72841 1.18754C8.49211 0.280536 6.9533 -0.130744 5.42187 0.0365241C3.89044 0.203792 2.48014 0.937182 1.47497 2.08901C0.469806 3.24083 -0.0555637 4.72554 0.00465958 6.24413C0.0648829 7.76273 0.706226 9.20242 1.79954 10.2733L7.83364 16.2346C8.33893 16.7251 9.01946 17 9.72841 17C10.4374 17 11.1179 16.7251 11.6232 16.2346L17.6573 10.2733C18.7918 9.1474 19.4286 7.62449 19.4286 6.0371C19.4286 4.44971 18.7918 2.9268 17.6573 1.80092ZM16.2872 8.95067L10.2531 14.9024C10.1845 14.9708 10.1027 15.0251 10.0127 15.0621C9.9226 15.0992 9.82599 15.1183 9.72841 15.1183C9.63083 15.1183 9.53422 15.0992 9.44416 15.0621C9.35409 15.0251 9.27237 14.9708 9.20371 14.9024L3.1696 8.92192C2.40757 8.15361 1.98086 7.12151 1.98086 6.04669C1.98086 4.97186 2.40757 3.93977 3.1696 3.17145C3.94612 2.41525 4.99341 1.99123 6.08463 1.99123C7.17584 1.99123 8.22313 2.41525 8.99965 3.17145C9.08998 3.26128 9.19745 3.33258 9.31586 3.38124C9.43427 3.4299 9.56127 3.45495 9.68954 3.45495C9.81782 3.45495 9.94482 3.4299 10.0632 3.38124C10.1816 3.33258 10.2891 3.26128 10.3794 3.17145C11.156 2.41525 12.2032 1.99123 13.2945 1.99123C14.3857 1.99123 15.433 2.41525 16.2095 3.17145C16.982 3.9297 17.4227 4.9562 17.4372 6.03105C17.4518 7.1059 17.039 8.14363 16.2872 8.92192V8.95067Z" fill="#359740"/>
                                 </svg>
                             </div>
-                            <div className='header__icon'>
+                            <div onClick={onButtonClick} className='header__icon'>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8.88672 21.3333C9.71515 21.3333 10.3867 20.6618 10.3867 19.8333C10.3867 19.0049 9.71515 18.3333 8.88672 18.3333C8.05829 18.3333 7.38672 19.0049 7.38672 19.8333C7.38672 20.6618 8.05829 21.3333 8.88672 21.3333Z" fill="#359740"/>
                                     <path d="M18 21.3333C18.8284 21.3333 19.5 20.6618 19.5 19.8333C19.5 19.0049 18.8284 18.3333 18 18.3333C17.1716 18.3333 16.5 19.0049 16.5 19.8333C16.5 20.6618 17.1716 21.3333 18 21.3333Z" fill="#359740"/>
@@ -57,14 +57,14 @@ const Header = () => {
                             </div>
                         </div>
                         <div onClick={onButtonClick} className={`header__hamburger`}>
-                            <span className={`header__hamburger--1 ${active ? 'header__hamburger--active' : ''}`}></span>
+                            <span className={`header__hamburger--1 ${activeMobileHeader ? 'header__hamburger--active' : ''}`}></span>
                             <span className='header__hamburger--2'></span>
-                            <span className={`header__hamburger--3 ${active ? 'header__hamburger--active' : ''}`}></span>
+                            <span className={`header__hamburger--3 ${activeMobileHeader ? 'header__hamburger--active' : ''}`}></span>
                         </div>
                     </div>
                 </div>
             </div>
-            <MobileMenu active={active}/>
+            <MobileMenu active={activeMobileHeader}/>
         </header>
     )
 }

@@ -6,10 +6,10 @@
     right: 0;
     width: 100%;
     height: 100%;
-    display: none;
     transform: translateX(350%);
     transition: all .6s ease;
     z-index: 4;
+
     &--active {
         display: flex;
         flex-direction: row-reverse;
@@ -21,7 +21,7 @@
         height: 100%;
         width: 75%;
         background: white;
-        box-shadow: -6px 4px 41px 0 rgba(0, 0, 0, 0.25);
+        // box-shadow: -6px 4px 41px 0 rgba(0, 0, 0, 0.25);
     }
 
     &__blur {
