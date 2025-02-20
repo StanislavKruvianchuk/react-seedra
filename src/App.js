@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer'
 import Home from './pages/Home';
-import Cart from './pages/Cart';
+import CartPage from './pages/CartPage';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <Header />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/cart' element={<Cart />} />
+          <Route path='/cart' element={<CartPage />} />
         </Routes>
         <Footer />
       </div>

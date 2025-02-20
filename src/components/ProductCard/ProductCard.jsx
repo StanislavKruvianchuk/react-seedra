@@ -57,7 +57,7 @@ const ProductCard = ({ product }) => {
                     <div className='product__title'>{title}</div>
                     <div className='product__price-box'>
                         <span className='product__price'>${price}</span>
-                        <AddToCartButton />
+                        <AddToCartButton product={product} />
                     </div>
                 </div>
             </div>

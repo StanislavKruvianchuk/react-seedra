@@ -58,7 +58,7 @@ const ProductGallery = () => {
 
             <div className="gallery__wrapper">
                 {
-                    filteredItems.map((product) => {
+                    filteredItems.map(product => {
                         return (
                             <div key={product.id}>
                                 <ProductCard  product={product} />

@@ -6,7 +6,8 @@ const products = [
         reviews: 154,
         image_type: "cabbage",
         type: 'all bundles',
-        id: 1
+        id: 1,
+        quantity: 1
     },
     {
         price: 9.50,
@@ -15,7 +16,8 @@ const products = [
         reviews: 89,
         image_type: "corn",
         type: 'all herbs',
-        id: 2
+        id: 2,
+        quantity: 1
     },
     {
         price: 6.75,
@@ -24,7 +26,8 @@ const products = [
         reviews: 203,
         image_type: "spinach",
         type: 'all vegetables',
-        id: 3
+        id: 3,
+        quantity: 1
     },
     {
         price: 12.99,
@@ -33,7 +36,8 @@ const products = [
         reviews: 154,
         image_type: "cabbage",
         type: 'all fruits',
-        id: 4
+        id: 4,
+        quantity: 1
     },
     {
         price: 10.20,
@@ -42,7 +46,8 @@ const products = [
         reviews: 112,
         image_type: "corn",
         type: 'all fruits',
-        id: 5
+        id: 5,
+        quantity: 1
     },
     {
         price: 8.45,
@@ -51,8 +56,10 @@ const products = [
         reviews: 57,
         image_type: "spinach",
         type: 'all supplies',
-        id: 6
+        id: 6,
+        quantity: 1
     }
-]
+];
+
 
 export default products
