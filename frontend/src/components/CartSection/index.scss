@@ -1,0 +1,29 @@
+@import '../../variables.scss';
+
+.cart-section {
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 700 auto;
+        grid-template-rows: auto auto;
+    }
+
+    &__top {
+        padding-bottom: 35px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        grid-column: span 2;
+    }
+
+    &__count {
+        color: $little_gray;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 1.3;
+    }
+
+    &__table {
+        max-width: 700px;
+        width: 100%;
+    }
+}
